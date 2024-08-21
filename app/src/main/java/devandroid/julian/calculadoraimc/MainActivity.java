@@ -1,8 +1,11 @@
 package devandroid.julian.calculadoraimc;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -72,5 +75,24 @@ public class MainActivity extends AppCompatActivity {
         }else {
             binding.txtResultado.setText("Seu IMC é: "+df.format(imc)+"\nObesidade Mórbida (Grau III)");
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_principal, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        int itemID = item.getItemId();
+
+        if (itemID == R.id.ic_limpar){
+            binding.editPeso.setText("");
+            binding.editAltura.setText("");
+            binding.txtResultado.setText("");
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

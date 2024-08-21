@@ -30,11 +30,13 @@
         android:hint="Informe seu Peso (kg)"
         app:hintTextColor="@color/blue"
         app:boxStrokeColor="@color/blue"
-        app:errorEnabled="true">
+        app:errorEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_peso"
             android:inputType="numberDecimal"
+            android:maxLength="6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -48,11 +50,13 @@
         android:hint="Informe sua Altura (metro e cm)"
         app:hintTextColor="@color/blue"
         app:boxStrokeColor="@color/blue"
-        app:errorEnabled="true">
+        app:errorEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_altura"
             android:inputType="numberDecimal"
+            android:maxLength="4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>

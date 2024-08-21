@@ -12,6 +12,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 
 import devandroid.julian.calculadoraimc.databinding.ActivityMainBinding;
 
@@ -56,24 +57,24 @@ public class MainActivity extends AppCompatActivity {
         float pesoConvertido;
         float alturaConvertida;
 
-        pesoConvertido = Float.parseFloat(edit_peso);
-        alturaConvertida = Float.parseFloat(edit_altura);
+        pesoConvertido = Float.parseFloat(edit_peso.replace(",","."));
+        alturaConvertida = Float.parseFloat(edit_altura.replace(",","."));
         imc = pesoConvertido / (alturaConvertida * alturaConvertida);
 
-        DecimalFormat df = new DecimalFormat("####0.00");
+        DecimalFormat df = new DecimalFormat("0.00");
 
         if (imc < 18.5){
-            binding.txtResultado.setText("Seu IMC é: "+df.format(imc)+"\nPeso Baixo");
+            binding.txtResultado.setText("Seu IMC é: "+df.format(imc).replace(".",",")+"\nPeso Baixo");
         } else if (imc > 18.5 && imc < 24.9) {
-            binding.txtResultado.setText("Seu IMC é: "+df.format(imc)+"\nPeso Normal");
+            binding.txtResultado.setText("Seu IMC é: "+df.format(imc).replace(".",",")+"\nPeso Normal");
         } else if (imc > 25.0 && imc < 29.9) {
-            binding.txtResultado.setText("Seu IMC é: "+df.format(imc)+"\nSobrepeso");
+            binding.txtResultado.setText("Seu IMC é: "+df.format(imc).replace(".",",")+"\nSobrepeso");
         } else if (imc > 30.0 && imc < 34.9) {
-            binding.txtResultado.setText("Seu IMC é: "+df.format(imc)+"\nObesidade (Grau I)");
+            binding.txtResultado.setText("Seu IMC é: "+df.format(imc).replace(".",",")+"\nObesidade (Grau I)");
         } else if (imc > 35.0 && imc < 39.9) {
-            binding.txtResultado.setText("Seu IMC é: "+df.format(imc)+"\nObesidade Severa (Grau II)");
+            binding.txtResultado.setText("Seu IMC é: "+df.format(imc).replace(".",",")+"\nObesidade Severa (Grau II)");
         }else {
-            binding.txtResultado.setText("Seu IMC é: "+df.format(imc)+"\nObesidade Mórbida (Grau III)");
+            binding.txtResultado.setText("Seu IMC é: "+df.format(imc).replace(".",",")+"\nObesidade Mórbida (Grau III)");
         }
     }
 

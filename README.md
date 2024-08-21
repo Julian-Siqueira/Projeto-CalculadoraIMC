@@ -4,6 +4,7 @@
 ![1](https://github.com/user-attachments/assets/25b51a27-936e-4c44-8dbb-7231d62aea3c)
 
 Projeto e bem básico, apenas verifica informa seu IMC!<br>
+Obs: Adicionado botão para limpar campos.<br>
 
 ## Telas do App
 caso não digite nenhum valor:<br>

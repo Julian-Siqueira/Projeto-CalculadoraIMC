@@ -21,6 +21,7 @@
         android:layout_marginEnd="20dp" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputPeso"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -28,7 +29,8 @@
         android:layout_marginEnd="20dp"
         android:hint="Informe seu Peso (kg)"
         app:hintTextColor="@color/blue"
-        app:boxStrokeColor="@color/blue">
+        app:boxStrokeColor="@color/blue"
+        app:errorEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_peso"
@@ -38,14 +40,15 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputAltura"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:hint="Informe sua Altura (metro e cm)"
         app:hintTextColor="@color/blue"
-        app:boxStrokeColor="@color/blue">
+        app:boxStrokeColor="@color/blue"
+        app:errorEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_altura"
